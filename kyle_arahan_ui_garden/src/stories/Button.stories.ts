@@ -1,29 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-
-import { fn } from 'storybook/test';
-
 import { Button } from './Button';
 
-
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   parameters: {
-    
     layout: 'centered',
   },
-  
   tags: ['autodocs'],
-  
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-  
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {

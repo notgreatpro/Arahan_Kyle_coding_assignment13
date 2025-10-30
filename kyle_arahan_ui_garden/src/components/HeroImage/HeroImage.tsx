@@ -1,8 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { HeroImageProps } from "./HeroImage.types";
+import React from 'react';
+import styled from 'styled-components';
+import { HeroImageProps } from './HeroImage.types';
 
-export const HeroImage: React.FC<HeroImageProps> = ({ imageUrl, title, subtitle }) => {
+export const HeroImage: React.FC<HeroImageProps> = ({
+  imageUrl,
+  title,
+  subtitle,
+}) => {
   return (
     <Container $imageUrl={imageUrl}>
       <Title>{title}</Title>
@@ -30,6 +34,5 @@ const Subtitle = styled.p`
   font-size: 1.2rem;
   opacity: 0.9;
 `;
-
 
 export default HeroImage;

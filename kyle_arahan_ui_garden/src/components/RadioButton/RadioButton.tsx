@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { RadioButtonProps } from "./RadioButton.types";
+import React from 'react';
+import styled from 'styled-components';
+import { RadioButtonProps } from './RadioButton.types';
 
 const RadioGroup = styled.div`
   display: flex;
@@ -9,8 +9,8 @@ const RadioGroup = styled.div`
 `;
 
 const RadioOption = styled.label<{ disabled?: boolean }>`
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  color: ${({ disabled }) => (disabled ? "#999" : "black")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  color: ${({ disabled }) => (disabled ? '#999' : 'black')};
 `;
 
 export const RadioButton: React.FC<RadioButtonProps> = ({

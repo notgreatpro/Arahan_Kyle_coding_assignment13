@@ -1,9 +1,9 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import { HeroImage } from "./HeroImage";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { HeroImage } from './HeroImage';
 
-describe("HeroImage component", () => {
-  test("renders title and subtitle", () => {
+describe('HeroImage component', () => {
+  test('renders title and subtitle', () => {
     render(
       <HeroImage
         imageUrl="https://placekitten.com/1200/400"
@@ -13,11 +13,15 @@ describe("HeroImage component", () => {
     );
 
     // Check title
-    expect(screen.getByText(/Welcome to the Component Library/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Welcome to the Component Library/i)
+    ).toBeInTheDocument();
 
     // Check subtitle
     expect(
-      screen.getByText(/Reusable UI components built with React and TypeScript/i)
+      screen.getByText(
+        /Reusable UI components built with React and TypeScript/i
+      )
     ).toBeInTheDocument();
   });
 });

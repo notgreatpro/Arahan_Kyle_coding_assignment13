@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { RadioButton } from "./RadioButton";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { RadioButton } from './RadioButton';
 
 const meta: Meta<typeof RadioButton> = {
-  title: "Components/RadioButton",
+  title: 'Components/RadioButton',
   component: RadioButton,
 };
 
@@ -11,16 +11,16 @@ type Story = StoryObj<typeof RadioButton>;
 
 export const Default: Story = {
   args: {
-    name: "gender",
-    options: ["Male", "Female", "Other"],
-    selectedValue: "Male",
+    name: 'gender',
+    options: ['Male', 'Female', 'Other'],
+    selectedValue: 'Male',
   },
 };
 
 export const Disabled: Story = {
   args: {
-    name: "gender",
-    options: ["Male", "Female", "Other"],
+    name: 'gender',
+    options: ['Male', 'Female', 'Other'],
     disabled: true,
   },
 };

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 interface CardProps {
   title: string;
@@ -18,7 +18,13 @@ const StyledCard = styled.div`
 
 export const Card: React.FC<CardProps> = ({ title, content, image }) => (
   <StyledCard>
-    {image && <img src={image} alt={title} style={{ width: "100%", borderRadius: "8px" }} />}
+    {image && (
+      <img
+        src={image}
+        alt={title}
+        style={{ width: '100%', borderRadius: '8px' }}
+      />
+    )}
     <h3>{title}</h3>
     <p>{content}</p>
   </StyledCard>

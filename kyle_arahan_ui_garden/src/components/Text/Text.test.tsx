@@ -1,12 +1,12 @@
-import { render, screen } from "@testing-library/react";
-import { Text } from "./Text";
+import { render, screen } from '@testing-library/react';
+import { Text } from './Text';
 
-test("renders text", () => {
+test('renders text', () => {
   render(<Text content="Hello" />);
-  expect(screen.getByText("Hello")).toBeVisible();
+  expect(screen.getByText('Hello')).toBeVisible();
 });
 
-test("text is greyed out when disabled", () => {
+test('text is greyed out when disabled', () => {
   render(<Text content="Disabled" disabled />);
-  expect(screen.getByText("Disabled")).toHaveStyle("opacity: 0.5");
+  expect(screen.getByText('Disabled')).toHaveStyle('opacity: 0.5');
 });
