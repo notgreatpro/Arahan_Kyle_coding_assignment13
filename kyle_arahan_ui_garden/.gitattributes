@@ -1,0 +1,14 @@
+# Husky scripts and shell scripts: always LF
+.husky/* text eol=lf
+*.sh text eol=lf
+
+# YAML (GitHub Actions workflows)
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# JSON, JS, TS, CSS, HTML: use platform default (CRLF on Windows)
+*.js text eol=crlf
+*.ts text eol=crlf
+*.json text eol=crlf
+*.css text eol=crlf
+*.html text eol=crlf
