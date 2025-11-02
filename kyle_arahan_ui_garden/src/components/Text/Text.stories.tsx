@@ -21,4 +21,6 @@ export const Default: Story = {
     size: '90px',
   },
 };
-
+export const Disabled: Story = {
+  args: { content: 'Disabled Text', disabled: true },
+};
