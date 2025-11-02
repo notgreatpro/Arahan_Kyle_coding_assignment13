@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+let unusedVariable;
 // Make sure all components are **named exports**
 import { Button } from './components/Button';
 import { Label } from './components/Label';
