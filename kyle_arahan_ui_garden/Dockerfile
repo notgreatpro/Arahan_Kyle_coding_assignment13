@@ -1,26 +1,36 @@
-FROM node:20-alpine AS build
-WORKDIR /arahan_kyle_ui_garden_build_checks
+# ---- Build Stage ----
+FROM node:18-alpine AS build
 
-# copy package.json and lock to take advantage of caching
+WORKDIR /app
+
+# Copy package files first (for caching)
 COPY package*.json ./
-RUN npm ci
 
-# copy project files
+# Install dependencies
+RUN npm install
+
+# Copy all app files
 COPY . .
 
-# ensure public/index.html exists before running build
-RUN ls -la public || true
+# Optional: run lint and prettier (won’t stop build if they fail)
+RUN npm run lint || true
+RUN npm run prettier || true
 
-# build production app
+# Optional: skip tests for speed
+# RUN npm test || true
+
+# Build the production app
 RUN npm run build
 
-# Stage 2: Serve with nginx
-FROM nginx:alpine
-# Copy the build output into nginx html
-COPY --from=build /arahan_kyle_ui_garden_build_checks/build /usr/share/nginx/html
 
-# Expose port 80 in the container
+# ---- Production Stage ----
+FROM nginx:alpine
+
+# Copy build output from previous stage
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80 for the web server
 EXPOSE 80
 
-# run nginx in foreground
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
