@@ -1,4 +1,3 @@
-g is formatted cleanly and ready to submit or include with your project.
 
 # Kyle Arahan - Component Library (Assignment 13)
 
