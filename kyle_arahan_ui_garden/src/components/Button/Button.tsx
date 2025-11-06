@@ -7,8 +7,7 @@ const StyledButton = styled.button<{
   disabled?: boolean;
 }>`
   background-color: ${({ disabled, backgroundColor }) =>
-    disabled ? '#ccc' : backgroundColor || '#007bff'};
-  color: white;
+    disabled ? '#ccc' : backgroundColor || v
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
