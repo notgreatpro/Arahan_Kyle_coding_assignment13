@@ -1,4 +1,3 @@
-
 # Kyle Arahan - Component Library (Assignment 13)
 
 ## 📘 Project Overview
@@ -6,19 +5,19 @@
 This project is a **React + Storybook component library** built using **TypeScript**.  
 It includes reusable and styled UI components such as:
 
-- Button  
-- Label  
-- Dropdown  
-- RadioButton  
-- Image  
-- HeroImage  
+- Button
+- Label
+- Dropdown
+- RadioButton
+- Image
+- HeroImage
 
 Storybook is used for **visual testing** and **component documentation**.  
 The entire application is **containerized using Docker** and runs on **localhost:8018**.
 
 ---
 
-##  Getting Started (Local Development)
+## Getting Started (Local Development)
 
 ### Prerequisites
 
@@ -34,7 +33,7 @@ Before you begin, make sure you have the following installed:
 
 In your terminal or command prompt, navigate to the project folder and run:
 
-```bash
+````bash
 npm install
 ### Command Prompt
 
@@ -45,7 +44,7 @@ To get started setup this assignment, please follow the steps below:
 
 ```bash
 cd LastName_FirstName_coding_assignment13
-```
+````
 
 (Note: Change LastName and First Name to your Name)
 
@@ -70,7 +69,7 @@ You'll see docker will now build your container
 
 2. After your docker has build your container, you can run your container
 
-```bash
+````bash
 docker run -d -p 8018:80 --name arahan_kyle_coding_assignment13 arahan_kyle_coding_assignment13
 
 
@@ -85,7 +84,7 @@ This means your docker is now running on your localhost. This will change every 
 
 ```bash
 http://127.0.0.1:8081
-```
+````
 
 (Note: If your localhost says: **Site cant be reached** it means your container cant run to your localhost due to reasons:
 
